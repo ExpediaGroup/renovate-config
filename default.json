@@ -5,7 +5,8 @@
         ":pinAllExceptPeerDependencies",
         "github>ExpediaGroup/renovate-config//versions",
         "github>ExpediaGroup/renovate-config//actions",
-        "schedule:earlyMondays"
+        "schedule:earlyMondays",
+        ":semanticCommitType(chore)"
     ],
     "commitMessageExtra": "from v{{currentVersion}} to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}",
     "commitMessageTopic": "{{#if depType}}{{depType}}{{else}}dependency{{/if}} {{depName}}",
